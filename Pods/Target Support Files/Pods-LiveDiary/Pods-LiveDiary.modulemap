@@ -1,0 +1,6 @@
+framework module Pods_LiveDiary {
+  umbrella header "Pods-LiveDiary-umbrella.h"
+
+  export *
+  module * { export * }
+}
