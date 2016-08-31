@@ -19,6 +19,10 @@ class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "りれき"
+        let backBtn = UIBarButtonItem(image: UIImage(named: "cancel.png"), style: .Plain, target: self, action: #selector(CalendarViewController.dismiss))
+        self.navigationItem.rightBarButtonItem = backBtn
+        
         formatter.dateFormat = "yyyy MM dd"
         testCalendar.timeZone = NSTimeZone(abbreviation: "GMT")!
         

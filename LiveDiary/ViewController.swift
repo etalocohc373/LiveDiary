@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         trashcan.contentMode = .ScaleAspectFit
         foodImg.tag = 1
         foodImg.userInteractionEnabled = true
-        foodImg.frame = CGRect.init(x: SCREEN_WIDTH / 2 - 50, y: 500, width: 100, height: 100)
+        foodImg.frame = CGRect.init(x: SCREEN_WIDTH / 2 - 50, y: 540, width: 100, height: 100)
         foodImg.hidden = true
         self.view.addSubview(foodImg)
         
@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         if (data != nil){
             trashcan.hidden = false
             foodImg.hidden = false
+            foodImg.frame = CGRect.init(x: SCREEN_WIDTH / 2 - 50, y: 540, width: 100, height: 100)
             let diary = NSKeyedUnarchiver.unarchiveObjectWithData(data!) as! DiaryObject
             var diaries : [DiaryObject] = []
             let arrData = store.objectForKey("diaries") as? NSData
@@ -103,26 +104,31 @@ class ViewController: UIViewController {
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches.first
-        if touch!.view!.tag == 1 && distanceBetweenPoints(charaImg.center, point2: (touch?.locationInView(self.view))!) < 70{
-            foodImg.hidden = true
-            trashcan.hidden = true
-            charaImg.image = UIImage(named: "stroke.png")
-            
-            
+        
+        let store = NSUserDefaults.standardUserDefaults()
+        let data = store.objectForKey("diaries") as? NSData
+        var diaries = NSKeyedUnarchiver.unarchiveObjectWithData(data!) as? [DiaryObject]
+        if touch!.view!.tag == 1{
+            if distanceBetweenPoints(charaImg.center, point2: (touch?.locationInView(self.view))!) < 40{
+                foodImg.hidden = true
+                trashcan.hidden = true
+                charaImg.image = UIImage(named: "stroke.png")
+                if diaries?.count != 0 && (diaries?.count)! % 2 == 0{
+                    commitEvolution()
+                }
+            }
+            if distanceBetweenPoints(trashcan.center, point2: (touch?.locationInView(self.view))!) < 25{
+                foodImg.hidden = true
+                trashcan.hidden = true
+                charaImg.image = UIImage(named: "normal.png")
+                
+                diaries?.removeLast()
+                let data2 = NSKeyedArchiver.archivedDataWithRootObject(diaries!)
+                store.setObject(data2, forKey: "diaries")
+                store.synchronize()
+            }
         }
-        if touch!.view!.tag == 1 && distanceBetweenPoints(trashcan.center, point2: (touch?.locationInView(self.view))!) < 25{
-            foodImg.hidden = true
-            trashcan.hidden = true
-            charaImg.image = UIImage(named: "normal.png")
-            
-            let store = NSUserDefaults.standardUserDefaults()
-            let data = store.objectForKey("diaries") as? NSData
-            var diaries = NSKeyedUnarchiver.unarchiveObjectWithData(data!) as? [DiaryObject]
-            diaries?.removeLast()
-            let data2 = NSKeyedArchiver.archivedDataWithRootObject(diaries!)
-            store.setObject(data2, forKey: "diaries")
-            store.synchronize()
-        }
+        
         if touch?.view!.tag == 2{
             animateChara(false)
             charaImg.stopAnimating()
@@ -133,6 +139,40 @@ class ViewController: UIViewController {
                 presentDiaryController()
                 touchUp = false
             }
+        }
+    }
+    
+    func commitEvolution(){
+        let store = NSUserDefaults.standardUserDefaults()
+        let data = store.objectForKey("diaries") as? NSData
+        let diaries = NSKeyedUnarchiver.unarchiveObjectWithData(data!) as? [DiaryObject]
+        var feelingCount = [0, 0, 0, 0, 0]
+        for var diary in diaries! {
+            feelingCount[Int(diary.feeling)] += 1
+        }
+        var maxIndex = 0
+        for (var i = 0; i < feelingCount.count; i += 1){
+            if feelingCount[i] > feelingCount[maxIndex]{
+                maxIndex = i
+            }
+        }
+        switch maxIndex {
+        case 0:
+            print("にこっ")
+            break
+        case 1:
+            print("ぐすん")
+            break
+        case 2:
+            print("まあまあ")
+            break
+        case 3:
+            print("むかっ")
+            break
+        case 4:
+            print("ほのぼの")
+            break
+        default: break
         }
     }
     

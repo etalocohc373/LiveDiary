@@ -18,6 +18,14 @@ class DiariesViewController: UICollectionViewController {
         let store = NSUserDefaults.standardUserDefaults()
         displayDate = store.objectForKey("displayDate") as? NSDate
         //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        
+        if displayDate?.compareDate(NSDate()) == .OrderedSame{
+            self.title = "きょうのこんだて"
+        }else{
+            let format = NSDateFormatter()
+            format.dateFormat = "Mがつdにちのレシピ"
+            self.title = format.stringFromDate(displayDate!)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -36,6 +44,16 @@ class DiariesViewController: UICollectionViewController {
         }
         
         self.collectionView?.reloadData()
+        
+        if diaries.count == 0 {
+            let noneAlert = UIAlertController(title: "この日は日記がありません", message: nil, preferredStyle: .Alert)
+            let backAction = UIAlertAction(title: "もどる", style: .Default, handler: {
+                (action: UIAlertAction!) -> Void in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            })
+            noneAlert.addAction(backAction)
+            self.presentViewController(noneAlert, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -176,11 +194,22 @@ class SpecifyViewController: UITableViewController, UITextViewDelegate, FeelingC
     }
     
     @IBAction func done(){
+        let editId = diaries[index].id
         let store = NSUserDefaults.standardUserDefaults()
-        diaries[index].feeling = Int32(feelingIndex)
-        diaries[index].text = textView?.text
-        let data = NSKeyedArchiver.archivedDataWithRootObject(diaries)
-        store.setObject(data, forKey: "diaries")
+        let data = store.objectForKey("diaries") as! NSData
+        var allDiaries = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [DiaryObject]
+        for (var i = 0; i < allDiaries.count; i += 1){
+            let diary = allDiaries[i]
+            if diary.id == editId{
+                diary.feeling = Int32(feelingIndex)
+                diary.text = textView?.text
+                allDiaries[i] = diary
+                break
+            }
+        }
+        
+        let data2 = NSKeyedArchiver.archivedDataWithRootObject(allDiaries)
+        store.setObject(data2, forKey: "diaries")
         store.synchronize()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -206,7 +235,7 @@ class SpecifyViewController: UITableViewController, UITextViewDelegate, FeelingC
             feeling = "むかっ"
             break
         case 4:
-            feeling = "ハートフル"
+            feeling = "ほのぼの"
             break
         default:
             feeling = ""

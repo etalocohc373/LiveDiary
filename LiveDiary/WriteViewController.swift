@@ -60,7 +60,7 @@ class WriteViewController: UITableViewController, UITextViewDelegate, FeelingCon
             imgName = "angry"
             break
         case 4:
-            feeling = "ハートフル"
+            feeling = "ほのぼの"
             imgName = "love"
             break
         default:
@@ -136,7 +136,7 @@ class FeelingViewController: UITableViewController {
             cell!.textLabel?.text = "むかっ"
             break
         case 4:
-            cell!.textLabel?.text = "ハートフル"
+            cell!.textLabel?.text = "ほのぼの"
             break
         default: break
             

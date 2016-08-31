@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7AA516C7886C679CB842B20C'
-               BlueprintName = 'Pods-LiveDiary'
+               BlueprintIdentifier = 'CE5D5006DB67F0459E3E19D9'
+               BlueprintName = 'Graphs'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_LiveDiary.framework'>
+               BuildableName = 'Graphs.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

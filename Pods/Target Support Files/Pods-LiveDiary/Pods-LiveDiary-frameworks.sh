@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-LiveDiary/Graphs.framework"
   install_framework "Pods-LiveDiary/JTAppleCalendar.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-LiveDiary/Graphs.framework"
   install_framework "Pods-LiveDiary/JTAppleCalendar.framework"
 fi

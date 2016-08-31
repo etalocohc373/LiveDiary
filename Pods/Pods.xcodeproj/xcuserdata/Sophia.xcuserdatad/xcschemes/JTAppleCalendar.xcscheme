@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2BCAB6AC9A56896A2522CED8'
+               BlueprintIdentifier = 'DC259E21166A5A6896A3BDD4'
                BlueprintName = 'JTAppleCalendar'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'JTAppleCalendar.framework'>

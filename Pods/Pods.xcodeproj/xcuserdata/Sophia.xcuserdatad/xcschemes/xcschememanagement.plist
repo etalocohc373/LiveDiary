@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Graphs.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JTAppleCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>135DA0B27133D7574675C029CD652080</key>
+		<key>2E2ED75B03CF4A2D0719664A48C0B27E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E2ED75B03CF4A2D0719664A48C0B27E</key>
+		<key>D9D31A7ECD48D53E170B20BA419477B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4BD3BFA0AD07F4009BC78A2F628276D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -27,6 +27,12 @@
 		EC70AEF61D75DF21008014EC /* WhiteSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC70AEF21D75DF21008014EC /* WhiteSectionHeaderView.xib */; };
 		EC70AF1E1D75EBEB008014EC /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC70AF1D1D75EBEB008014EC /* CellView.xib */; };
 		EC70AF201D769671008014EC /* garbage.png in Resources */ = {isa = PBXBuildFile; fileRef = EC70AF1F1D769671008014EC /* garbage.png */; };
+		EC70AF221D769EA4008014EC /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70AF211D769EA4008014EC /* GraphViewController.swift */; };
+		ECC0A8F81D76B31B00F1C289 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC0A8F71D76B31B00F1C289 /* PageViewController.swift */; };
+		ECC0A8FA1D76C36000F1C289 /* fukidasi.png in Resources */ = {isa = PBXBuildFile; fileRef = ECC0A8F91D76C36000F1C289 /* fukidasi.png */; };
+		ECC0A8FC1D76C82D00F1C289 /* okasi.png in Resources */ = {isa = PBXBuildFile; fileRef = ECC0A8FB1D76C82D00F1C289 /* okasi.png */; };
+		ECC0A9001D76CAD400F1C289 /* moji.png in Resources */ = {isa = PBXBuildFile; fileRef = ECC0A8FF1D76CAD400F1C289 /* moji.png */; };
+		ECC0A9021D76CCB500F1C289 /* sara.png in Resources */ = {isa = PBXBuildFile; fileRef = ECC0A9011D76CCB500F1C289 /* sara.png */; };
 		ECDAEE561D6230A2006A9ADC /* cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDAEE501D6230A2006A9ADC /* cancel@3x.png */; };
 		ECDAEE571D6230A2006A9ADC /* chara.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDAEE511D6230A2006A9ADC /* chara.png */; };
 		ECDAEE581D6230A2006A9ADC /* done.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDAEE521D6230A2006A9ADC /* done.png */; };
@@ -92,6 +98,12 @@
 		EC70AEF21D75DF21008014EC /* WhiteSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhiteSectionHeaderView.xib; sourceTree = "<group>"; };
 		EC70AF1D1D75EBEB008014EC /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
 		EC70AF1F1D769671008014EC /* garbage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = garbage.png; sourceTree = "<group>"; };
+		EC70AF211D769EA4008014EC /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		ECC0A8F71D76B31B00F1C289 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		ECC0A8F91D76C36000F1C289 /* fukidasi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukidasi.png; sourceTree = "<group>"; };
+		ECC0A8FB1D76C82D00F1C289 /* okasi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = okasi.png; sourceTree = "<group>"; };
+		ECC0A8FF1D76CAD400F1C289 /* moji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moji.png; sourceTree = "<group>"; };
+		ECC0A9011D76CCB500F1C289 /* sara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sara.png; sourceTree = "<group>"; };
 		ECDAEE501D6230A2006A9ADC /* cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@3x.png"; sourceTree = "<group>"; };
 		ECDAEE511D6230A2006A9ADC /* chara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chara.png; sourceTree = "<group>"; };
 		ECDAEE521D6230A2006A9ADC /* done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = done.png; sourceTree = "<group>"; };
@@ -187,7 +199,9 @@
 				EC1188D11D5D626E0007F33C /* ViewController.swift */,
 				EC1189011D5D68690007F33C /* WriteViewController.swift */,
 				EC1189111D5F980E0007F33C /* DiariesViewController.swift */,
+				ECC0A8F71D76B31B00F1C289 /* PageViewController.swift */,
 				EC70AEEA1D75CD32008014EC /* CalendarViewController.swift */,
+				EC70AF211D769EA4008014EC /* GraphViewController.swift */,
 				EC1189071D5F40110007F33C /* DiaryObject.swift */,
 				EC1188D31D5D626E0007F33C /* Main.storyboard */,
 				EC70AEE81D75BEBB008014EC /* CellView.swift */,
@@ -233,6 +247,10 @@
 		ECDAEE4F1D623075006A9ADC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				ECC0A9011D76CCB500F1C289 /* sara.png */,
+				ECC0A8FF1D76CAD400F1C289 /* moji.png */,
+				ECC0A8FB1D76C82D00F1C289 /* okasi.png */,
+				ECC0A8F91D76C36000F1C289 /* fukidasi.png */,
 				EC70AF1F1D769671008014EC /* garbage.png */,
 				ECDAEE7E1D735431006A9ADC /* angry.png */,
 				ECDAEE7C1D735388006A9ADC /* mizutama.png */,
@@ -370,6 +388,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECDAEE761D62E55A006A9ADC /* eat.png in Resources */,
+				ECC0A8FA1D76C36000F1C289 /* fukidasi.png in Resources */,
+				ECC0A9001D76CAD400F1C289 /* moji.png in Resources */,
 				ECDAEE771D62E55A006A9ADC /* normal.png in Resources */,
 				ECDAEE7D1D735388006A9ADC /* mizutama.png in Resources */,
 				EC1188DA1D5D626E0007F33C /* LaunchScreen.storyboard in Resources */,
@@ -377,6 +397,7 @@
 				ECDAEE581D6230A2006A9ADC /* done.png in Resources */,
 				ECDAEE781D62E55A006A9ADC /* stroke.png in Resources */,
 				ECDAEE751D62E55A006A9ADC /* blink.png in Resources */,
+				ECC0A9021D76CCB500F1C289 /* sara.png in Resources */,
 				ECDAEE561D6230A2006A9ADC /* cancel@3x.png in Resources */,
 				EC1188D51D5D626E0007F33C /* Main.storyboard in Resources */,
 				EC70AF1E1D75EBEB008014EC /* CellView.xib in Resources */,
@@ -387,6 +408,7 @@
 				EC70AEF41D75DF21008014EC /* PinkSectionHeaderView.xib in Resources */,
 				ECDAEE5A1D6230A2006A9ADC /* setting@3x.png in Resources */,
 				ECDAEE791D62E55A006A9ADC /* stroke2.png in Resources */,
+				ECC0A8FC1D76C82D00F1C289 /* okasi.png in Resources */,
 				ECDAEE5B1D6230A2006A9ADC /* trash@3x.png in Resources */,
 				ECDAEE571D6230A2006A9ADC /* chara.png in Resources */,
 				ECDAEE591D6230A2006A9ADC /* macaron.png in Resources */,
@@ -464,12 +486,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC70AEF31D75DF21008014EC /* PinkSectionHeaderView.swift in Sources */,
+				ECC0A8F81D76B31B00F1C289 /* PageViewController.swift in Sources */,
 				EC1189081D5F40110007F33C /* DiaryObject.swift in Sources */,
 				EC1189021D5D68690007F33C /* WriteViewController.swift in Sources */,
 				EC1189121D5F980E0007F33C /* DiariesViewController.swift in Sources */,
 				EC70AEED1D75DDF6008014EC /* AnimationClass.swift in Sources */,
 				EC1188D21D5D626E0007F33C /* ViewController.swift in Sources */,
 				EC70AEE91D75BEBB008014EC /* CellView.swift in Sources */,
+				EC70AF221D769EA4008014EC /* GraphViewController.swift in Sources */,
 				ECDAEE621D6234A1006A9ADC /* Transitioner.swift in Sources */,
 				EC70AEEB1D75CD32008014EC /* CalendarViewController.swift in Sources */,
 				EC70AEF51D75DF21008014EC /* WhiteSectionHeaderView.swift in Sources */,

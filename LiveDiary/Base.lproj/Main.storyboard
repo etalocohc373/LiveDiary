@@ -10,10 +10,12 @@
             <string>APJapanesefont</string>
             <string>APJapanesefont</string>
             <string>APJapanesefont</string>
+            <string>APJapanesefont</string>
+            <string>APJapanesefont</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--ホーム-->
+        <!--かんさつべや-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LiveDiary" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,40 +30,48 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="mizutama.png" translatesAutoresizingMaskIntoConstraints="NO" id="lkh-Hu-bYh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="mizutama.png" translatesAutoresizingMaskIntoConstraints="NO" id="6nT-BG-hdG">
+                                <rect key="frame" x="-185" y="507" width="633" height="421"/>
+                            </imageView>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="garbage.png" translatesAutoresizingMaskIntoConstraints="NO" id="LGU-E9-5iJ">
+                                <rect key="frame" x="320" y="501" width="44" height="44"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="center" fixedFrame="YES" image="normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="TcI-EE-hnL">
+                                <rect key="frame" x="63" y="342" width="249" height="249"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fukidasi.png" translatesAutoresizingMaskIntoConstraints="NO" id="I2m-MR-KBm">
+                                <rect key="frame" x="-27" y="89" width="319" height="184"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4H5-ge-N8K">
+                                <rect key="frame" x="40" y="145" width="198" height="71"/>
+                                <fontDescription key="fontDescription" name="APJapanesefont" family="APJapanesefont" pointSize="36"/>
+                                <state key="normal" title="かんさつきろく">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GFH-1P-jlm" kind="presentation" id="U8I-OU-Sbz"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acJ-z7-BlM">
-                                <rect key="frame" x="246" y="127" width="75" height="30"/>
-                                <state key="normal" title="日記を書く">
+                                <rect key="frame" x="188" y="219" width="167" height="167"/>
+                                <fontDescription key="fontDescription" name="APJapanesefont" family="APJapanesefont" pointSize="30"/>
+                                <state key="normal" backgroundImage="okasi.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="vHS-lG-qUB" kind="presentation" id="tzX-bp-tjM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4H5-ge-N8K">
-                                <rect key="frame" x="67" y="231" width="60" height="30"/>
-                                <state key="normal" title="振り返る">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="haz-Q1-ije" kind="presentation" id="gGn-TG-NMi"/>
-                                </connections>
-                            </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="center" fixedFrame="YES" image="normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="TcI-EE-hnL">
-                                <rect key="frame" x="63" y="342" width="249" height="249"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moji.png" translatesAutoresizingMaskIntoConstraints="NO" id="UQb-mG-DdK">
+                                <rect key="frame" x="195" y="272" width="152" height="95"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUD-gn-UmK">
-                                <rect key="frame" x="91" y="611" width="192" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="garbage.png" translatesAutoresizingMaskIntoConstraints="NO" id="LGU-E9-5iJ">
-                                <rect key="frame" x="291" y="568" width="64" height="64"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sara.png" translatesAutoresizingMaskIntoConstraints="NO" id="AAl-qt-qmk">
+                                <rect key="frame" x="98" y="566" width="176" height="90"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ホーム" id="CX9-Fg-IVB">
+                    <navigationItem key="navigationItem" title="かんさつべや" id="CX9-Fg-IVB">
                         <barButtonItem key="rightBarButtonItem" image="setting.png" id="jgD-lx-KtG"/>
                     </navigationItem>
                     <connections>
@@ -73,7 +83,7 @@
             </objects>
             <point key="canvasLocation" x="789.5" y="1014.5"/>
         </scene>
-        <!--にっき-->
+        <!--にっきづくり-->
         <scene sceneID="dvO-1h-5UK">
             <objects>
                 <tableViewController id="bfh-yB-1d0" customClass="WriteViewController" customModule="LiveDiary" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,7 +144,7 @@
                             <outlet property="delegate" destination="bfh-yB-1d0" id="ioq-QR-Q3A"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="にっき" id="aly-oB-qb2">
+                    <navigationItem key="navigationItem" title="にっきづくり" id="aly-oB-qb2">
                         <barButtonItem key="leftBarButtonItem" image="cancel.png" id="ijc-ki-vOW">
                             <connections>
                                 <action selector="cancel" destination="bfh-yB-1d0" id="Ndz-uy-4vJ"/>
@@ -237,9 +247,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="にっき" id="5cl-5t-pox">
-                        <barButtonItem key="rightBarButtonItem" image="cancel.png" id="U1p-qF-4K1">
+                        <barButtonItem key="leftBarButtonItem" image="cancel.png" id="U1p-qF-4K1">
                             <connections>
                                 <action selector="cancel" destination="qnO-W0-lSV" id="1Xq-4c-LpW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="done.png" id="bLG-qB-abt">
+                            <connections>
+                                <action selector="done" destination="qnO-W0-lSV" id="RV6-4T-CCv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -366,10 +381,66 @@
             </objects>
             <point key="canvasLocation" x="1220.5" y="274.5"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="8sg-CL-0Y9">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="GFH-1P-jlm" customClass="PageViewController" customModule="LiveDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eaI-EH-XBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312.5" y="274.5"/>
+        </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="T0F-D3-jHY">
+            <objects>
+                <viewController storyboardIdentifier="graph" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NOr-J0-GQu" customClass="GraphViewController" customModule="LiveDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7GA-bY-605"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mdu-7g-r2j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Ab-2N-nfX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="mizutama.png" translatesAutoresizingMaskIntoConstraints="NO" id="anL-R4-13N">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRy-Tz-4no">
+                                <rect key="frame" x="14" y="133" width="328" height="341"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DoB-L3-y6i">
+                                <rect key="frame" x="0.0" y="-33" width="375" height="98"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Teo-t0-oRR">
+                                <rect key="frame" x="0.0" y="21" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="りれき" id="Fq8-a2-5Z3">
+                                        <barButtonItem key="rightBarButtonItem" image="cancel.png" id="Lw5-mn-pW7">
+                                            <connections>
+                                                <action selector="dismiss" destination="NOr-J0-GQu" id="eMg-s3-Pum"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="graphView" destination="gRy-Tz-4no" id="3c3-aR-Xbr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNN-o0-RGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.5" y="-439.5"/>
+        </scene>
         <!--Some Nav title-->
         <scene sceneID="guK-ur-gfT">
             <objects>
-                <viewController id="haz-Q1-ije" customClass="CalendarViewController" customModule="LiveDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calendar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="haz-Q1-ije" customClass="CalendarViewController" customModule="LiveDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u3T-8j-Caz"/>
                         <viewControllerLayoutGuide type="bottom" id="7jV-jP-Zgr"/>
@@ -378,8 +449,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="mizutama.png" translatesAutoresizingMaskIntoConstraints="NO" id="CDE-6C-lLi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhe-CC-drH">
                                 <rect key="frame" x="16" y="70" width="343" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.29803921570000003" green="0.58039215690000001" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -478,13 +553,13 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z1l-sD-SM4">
-                                <rect key="frame" x="0.0" y="-50" width="375" height="114"/>
+                                <rect key="frame" x="0.0" y="-34" width="375" height="98"/>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WhX-9B-Wga">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="カレンダー" id="mwL-vb-d1t">
+                                    <navigationItem title="りれき" id="mwL-vb-d1t">
                                         <barButtonItem key="rightBarButtonItem" image="cancel.png" id="7e6-BK-Jot">
                                             <connections>
                                                 <action selector="dismiss" destination="haz-Q1-ije" id="pgP-HY-PGl"/>
@@ -523,6 +598,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Some Nav title" id="sQs-JM-kaf"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="calendarView" destination="jlJ-Ep-2qE" id="c2d-KE-M79"/>
                         <outlet property="monthLabel" destination="Jhe-CC-drH" id="2xF-yX-77J"/>
@@ -536,9 +612,13 @@
     <resources>
         <image name="cancel.png" width="24" height="24"/>
         <image name="done.png" width="25" height="25"/>
+        <image name="fukidasi.png" width="420" height="300"/>
         <image name="garbage.png" width="128" height="128"/>
         <image name="mizutama.png" width="640" height="1136"/>
+        <image name="moji.png" width="534" height="267"/>
         <image name="normal.png" width="240" height="225"/>
+        <image name="okasi.png" width="655" height="655"/>
+        <image name="sara.png" width="650" height="309"/>
         <image name="setting.png" width="24" height="24"/>
     </resources>
 </document>
